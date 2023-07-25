@@ -1,2 +1,2 @@
 # spertoj.com
-Design Travel Experience
+SPERTOJ
