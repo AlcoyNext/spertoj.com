@@ -14,18 +14,6 @@
     <!-- Mapbox -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
-
-    <script
-        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
-    <link rel="stylesheet"
-        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
-        type="text/css">
-
-    <script
-        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
-    <link rel="stylesheet"
-        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
-        type="text/css">
     <!-- Page -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,7 +33,7 @@
 <body>
     <header>
         <div id="nav">
-            <span id="planner" class="material-symbols-outlined material-b" onclick="planner_tool();">map</span>
+            <span id="search" class="material-symbols-outlined material-b" onclick="search_tool();">search</span>
             <div id="logo" onclick="window.open('https://spertoj.com', '_self');"></div>
             <div id="profile"></div>
         </div>
@@ -74,14 +62,6 @@
             <span id="car" class="layer material-symbols-outlined material-s" onclick="">car_rental</span>
         </div>
     </main>
-    <footer>
-        <div id="tools">
-            <span id="direction" class="tool material-symbols-outlined material-m"
-                onclick="direction_tool();">directions</span>
-            <span id="geocoder" class="tool material-symbols-outlined material-m"
-                onclick="geocoder_tool();">search</span>
-        </div>
-    </footer>
     <script src="lib.js"></script>
     <script src="main.js"></script>
 </body>

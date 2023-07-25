@@ -42,27 +42,3 @@ map.on('load', () => {
 map.on('idle', () => {
 
 });
-
-/* Mapbox Directions */
-const direction = new MapboxDirections({
-    accessToken: mapboxgl.accessToken,
-    unit: 'metric',
-    profile: 'mapbox/walking',
-    language: 'es',
-    steps: true
-});
-
-function direction_tool() {
-    checkControl(direction, document.getElementById("direction"));
-}
-
-/* Mapbox Geocoder */
-const geocoder = new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl,
-    language: 'es'
-});
-
-function geocoder_tool() {
-    checkControl(geocoder, document.getElementById("geocoder"));
-}
