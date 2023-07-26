@@ -3,6 +3,6 @@
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const code = urlParams.get('code');
-    document.cookie = "kid="+code+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict";
+    document.cookie = "spertoj_token_id="+code+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict";
     //window.location.replace("https://spertoj.com");
 </script>
