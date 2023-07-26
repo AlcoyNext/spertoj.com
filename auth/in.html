@@ -1,8 +1,11 @@
 <script>
-    console.log(window.location.href)
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const code = urlParams.get('code');
-    document.cookie = "spertoj_token_id="+code+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict";
-    //window.location.replace("https://spertoj.com");
+    const id_token = urlParams.get('id_token');
+    document.cookie = "spertoj_id_token="+id_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
+    const access_token = urlParams.get('access_token');
+    document.cookie = "spertoj_access_token="+access_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
+    const refresh_token = urlParams.get('refresh_token');
+    document.cookie = "spertoj_refresh_token="+refresh_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
+    window.location.replace("https://spertoj.com");
 </script>
