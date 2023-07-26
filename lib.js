@@ -11,7 +11,7 @@ function getCookie(name) {
 
 function profile() {
     let profile = document.getElementById("profile");
-    if (getCookie('token_id') !== undefined ){
+    if (getCookie('kid') !== undefined ){
         profile.innerHTML = "<span id=\"logout\" class=\"material-symbols-outlined material-b\" onclick=\"\">menu</span>";
     } else {
         profile.innerHTML = "<span id=\"login\" class=\"material-symbols-outlined material-b\" onclick=\"window.open('https://login.spertoj.com/login?client_id=7u8j0l8bdt8il60gampj44vbm&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fspertoj.com%2Fauth%2Fin.html', '_self');\">login</span>";
