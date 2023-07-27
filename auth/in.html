@@ -1,26 +1,13 @@
 <script>
 
-    var tokens = window.location.hash;
-    const urlParams = new URLSearchParams(tokens.replace('#','?'));
+    const tokens = window.location.hash;
+    const params = new URLSearchParams(tokens.replace('#','?'));
+    document.cookie = "spertoj_token_id="+params.get('id_token')+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
+    console.log(params.get('id_token'))
 
-    const entries = urlParams.entries();
-
-    for(const entry of entries) {
-        console.log(`${entry[0]} = ${entry[1]}`);
-    }
-
-    // const code = urlParams.get('code');
-    // document.cookie = "kid="+code+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict";
-
-    // const queryString = window.location.search;
-    // const urlParams = new URLSearchParams(queryString);
-    // const id_token = urlParams.get('id_token');
-    // document.cookie = "spertoj_id_token="+id_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
-    // const access_token = urlParams.get('access_token');
-    // document.cookie = "spertoj_access_token="+access_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
-    // const refresh_token = urlParams.get('refresh_token');
-    // document.cookie = "spertoj_refresh_token="+refresh_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
-
+    // for(const entry of entries) {
+    //     document.cookie = entry[0]+"="+entry[1]+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
+    // }
 
     //window.location.replace("https://spertoj.com");
 </script>
