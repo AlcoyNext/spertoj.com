@@ -1,11 +1,26 @@
 <script>
+
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const id_token = urlParams.get('id_token');
-    document.cookie = "spertoj_id_token="+id_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
-    const access_token = urlParams.get('access_token');
-    document.cookie = "spertoj_access_token="+access_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
-    const refresh_token = urlParams.get('refresh_token');
-    document.cookie = "spertoj_refresh_token="+refresh_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
-    window.location.replace("https://spertoj.com");
+
+    const entries = urlParams.entries();
+
+    for(const entry of entries) {
+        console.log(`${entry[0]} = ${entry[1]}`);
+    }
+    
+    // const code = urlParams.get('code');
+    // document.cookie = "kid="+code+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict";
+
+    // const queryString = window.location.search;
+    // const urlParams = new URLSearchParams(queryString);
+    // const id_token = urlParams.get('id_token');
+    // document.cookie = "spertoj_id_token="+id_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
+    // const access_token = urlParams.get('access_token');
+    // document.cookie = "spertoj_access_token="+access_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
+    // const refresh_token = urlParams.get('refresh_token');
+    // document.cookie = "spertoj_refresh_token="+refresh_token+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
+
+
+    //window.location.replace("https://spertoj.com");
 </script>
