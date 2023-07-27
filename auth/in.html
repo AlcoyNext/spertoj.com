@@ -1,13 +1,6 @@
 <script>
-
     const tokens = window.location.hash;
     const params = new URLSearchParams(tokens.replace('#','?'));
     document.cookie = "spertoj_token_id="+params.get('id_token')+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
-    console.log(params.get('id_token'))
-
-    // for(const entry of entries) {
-    //     document.cookie = entry[0]+"="+entry[1]+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict;";
-    // }
-
-    //window.location.replace("https://spertoj.com");
+    window.location.replace("https://spertoj.com");
 </script>
