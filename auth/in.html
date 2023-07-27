@@ -1,5 +1,9 @@
 <script>
 
+    const url = window.location.href;
+    url.replace('#','?');
+    console.log(url);
+    
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
 
@@ -8,7 +12,7 @@
     for(const entry of entries) {
         console.log(`${entry[0]} = ${entry[1]}`);
     }
-    
+
     // const code = urlParams.get('code');
     // document.cookie = "kid="+code+"; path=/; domain=spertoj.com; max-age=3600; secure; samesite=strict";
 
