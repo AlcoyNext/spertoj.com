@@ -1,6 +1,7 @@
 <script>
 
     var tokens = window.location.hash;
+    tokens.replace('#','&')
     console.log(tokens);
 
     const queryString = window.location.search;
