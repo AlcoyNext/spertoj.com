@@ -11,7 +11,7 @@ function getCookie(name) {
 
 function profile() {
     let profile = document.getElementById("profile");
-    if (getCookie('spertoj_token_id') !== undefined ){
+    if (getCookie('spertoj_token_id') !== undefined) {
         profile.innerHTML = "<span id=\"logout\" class=\"material-symbols-outlined material-b\" onclick=\"\">menu</span>";
     } else {
         profile.innerHTML = "<span id=\"login\" class=\"material-symbols-outlined material-b\" onclick=\"window.open('https://login.spertoj.com/login?client_id=4bldpvs0sk1u0m6km6basfoms&response_type=token&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fspertoj.com%2Fauth%2Fin.html', '_self');\">login</span>";
@@ -29,6 +29,7 @@ function gisInit() {
         container: "map",
         center: [-0.47298, 38.69826],
         zoom: 11,
+        style: "tomtom/spertoj.json"
     })
 
     let attributions = ['<a href="https://erp.alcoynext.com/helpdesk" target="_blank">ALCOY NEXT Inc.</a>'];
