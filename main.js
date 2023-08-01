@@ -11,6 +11,6 @@ profile();
 
 tt.setProductInfo("spertoj.com", "1")
 tt.map({
-    key: "idrSO8HEhlajaGPSMkSAszNR9lTMCMHQ",
+    key: "huc94WnAmE3OxddgEcXibEuCzSLifAYl",
     container: "map",
 })
