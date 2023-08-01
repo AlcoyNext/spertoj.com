@@ -32,7 +32,7 @@ function gisInit() {
         style: "tomtom/spertoj.json"
     })
 
-    let attributions = ['<a href="https://erp.alcoynext.com/helpdesk" target="_blank">ALCOY NEXT Inc.</a>'];
+    let attributions = ['<a href="https://alcoynext.com" target="_blank">ALCOY NEXT Inc.</a>'];
     map.getAttributionControl().addAttribution(attributions);
 
     let nav = new tt.NavigationControl({});
