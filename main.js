@@ -10,7 +10,10 @@ profile();
 //
 
 tt.setProductInfo("spertoj.com", "1")
-tt.map({
-    key: "huc94WnAmE3OxddgEcXibEuCzSLifAYl",
+let map = tt.map({
+    key: "idrSO8HEhlajaGPSMkSAszNR9lTMCMHQ",
     container: "map",
 })
+
+var nav = new tt.NavigationControl({});
+map.addControl(nav, 'top-left');
